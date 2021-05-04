@@ -704,65 +704,6 @@
         "clouds_mid": 31,
         "clouds_low": 46
       }
-    ],
-    "cityInfo" : [
-      {
-    "city_name": "Sydney",
-    "lon": 151.21,
-    "timezone": "Australia/Sydney",
-    "lat": -33.87,
-    "country_code": "AU",
-    "state_code": "02"},
-    {
-      "city_name":"Amman",
-      "lat":31.9515694,
-      "lot":35.9239625,
-      "wind_dir": 309,
-      "max_dhi": null,
-      "clouds_hi": 93,
-      "precip": 0,
-      "low_temp": 20.6,
-      "max_temp": 30.4,
-      "moonset_ts": 1617684992,
-      "datetime": "2021-04-06",
-      "temp": 25.6,
-      "min_temp": 20.6,
-      "clouds_mid": 60,
-      "clouds_low": 2
-    },
-    {
-      "city_name":"Paris",
-      "lat":48.8566969,
-      "lot":2.3514616,
-      "wind_dir": 309,
-      "max_dhi": null,
-      "clouds_hi": 93,
-      "precip": 0,
-      "low_temp": 20.6,
-      "max_temp": 30.4,
-      "moonset_ts": 1617684992,
-      "datetime": "2021-04-06",
-      "temp": 25.6,
-      "min_temp": 20.6,
-      "clouds_mid": 60,
-      "clouds_low": 2
-    },
-    {
-      "city_name":"Seattle",
-      "lat":47.6038321,
-      "lot":-122.3300624,
-      "wind_dir": 309,
-      "max_dhi": null,
-      "clouds_hi": 93,
-      "precip": 0,
-      "low_temp": 20.6,
-      "max_temp": 30.4,
-      "moonset_ts": 1617684992,
-      "datetime": "2021-04-06",
-      "temp": 25.6,
-      "min_temp": 20.6,
-      "clouds_mid": 60,
-      "clouds_low": 2
-    }
-  ]
+    ]
+    
   }
