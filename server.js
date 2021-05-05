@@ -40,7 +40,7 @@ app.get('/test' , (req, res) => {
 class Weather {
     constructor(data){
         this.date = data.valid_date;
-        this.description = data.weather.description;
+        this.description = `Low of ${data.low_temp} , High of ${data.max_temp} with ${data.weather.description}`;
     }
 }
 
