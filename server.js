@@ -11,11 +11,6 @@ const port = process.env.PORT ;
 
 
 
-// app.get('/weather' , (req , res) => {
-//     const data = weatherData.data.map( data => new Weather(data));
-//     res.send(data);
-// });
-
 app.get('/weather' , (req , res) => {
     console.log(req.query);
     const url = `https://api.weatherbit.io/v2.0/forecast/daily?key=${process.env.WEATHER_API_KEY}&lat=${req.query.lat}&lon=${req.query.lon}`;
@@ -41,6 +36,7 @@ app.get('/test' , (req, res) => {
         superagent.get(url).then(data => res.send(data)).catch(res.send('error') );
 });
 
+
 class Weather {
     constructor(data){
         this.date = data.valid_date;
@@ -62,6 +58,7 @@ class Movies{
         this.released_on = data.release_date ;
     }
 }
+
 
 app.listen(port);
 
