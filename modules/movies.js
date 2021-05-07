@@ -1,14 +1,30 @@
 const superagent = require('superagent');
 require('dotenv').config();
-
+const cacheMemory = {};
 
 
 const getMovies = (req , res) => {
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${req.query.city}`;
-    superagent.get(url).then( data => {
+    const url = `https://api.themoviedb.org/3/search/movie`;
+    const key = req.query.city ;
+    const queryParams = {
+        api_key:process.env.MOVIE_API_KEY,
+        query:req.query.city ,
+    }
+    
+    if(cacheMemory[key])
+    {
+        res.send(cacheMemory[key]);
+        console.log('sent from cache memory');
+    }
+    else{
+    superagent.get(url).query(queryParams).then( data => {
         const moviesData = data.body.results.map( data => new Movies(data));
+        cacheMemory[key] = moviesData ;
         res.send(moviesData);
-    })
+        console.log('sent from  Api request ');
+    }).catch( error => res.send(error));
+}
+    console.log(cacheMemory);
     
 } ;
 
